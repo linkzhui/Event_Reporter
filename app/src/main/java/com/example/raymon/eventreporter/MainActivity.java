@@ -1,18 +1,32 @@
 package com.example.raymon.eventreporter;
 
+import android.content.res.Configuration;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EventFragment.OnItemSelectListener{
 
+
+    EventFragment listFragment;
+    CommentFragment gridFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.e("Life cycle test", "We are at onCreate()");
+
+        //Show different fragment based on the screen size.
+
+//        if(findViewById(R.id.fragment_container)!=null)
+//        {
+//            Fragment fragment  = isTable()? new CommentFragment():new EventFragment();
+//            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragment).commit();
+//        }
         // Get ListView object from xml.
 //        ListView eventListView = (ListView) findViewById(R.id.event_list);
 //
@@ -27,6 +41,23 @@ public class MainActivity extends AppCompatActivity {
 ////        eventListView.setAdapter(adapter);
 //        EventAdapter adapter = new EventAdapter(this);
 //        eventListView.setAdapter(adapter);
+
+        //add list view
+        if(isTable())
+        {
+            listFragment = new EventFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.event_container,listFragment).commit();
+        }
+
+        //add Gridview
+        gridFragment = new CommentFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.comment_container,gridFragment).commit();
+    }
+
+    @Override
+    public void onItemSelected(int position)
+    {
+        gridFragment.onItemSelected(position);
     }
 
     /**
@@ -74,4 +105,10 @@ public class MainActivity extends AppCompatActivity {
         Log.e("Life cycle test", "We are at onDestroy()");
     }
 
+    private boolean isTable(){
+        return (getApplicationContext().getResources().getConfiguration().screenLayout &
+                Configuration.SCREENLAYOUT_SIZE_MASK) >=
+                Configuration.SCREENLAYOUT_SIZE_LARGE;
+
+    }
 }
