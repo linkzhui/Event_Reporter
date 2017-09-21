@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "380468152290",
+    "firebase_url": "https://eventreporter-af6d5.firebaseio.com",
+    "project_id": "eventreporter-af6d5",
+    "storage_bucket": "eventreporter-af6d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380468152290:android:920d7ee17c55d215",
+        "android_client_info": {
+          "package_name": "com.example.raymon.eventreporter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380468152290-5jtmkgdbqoobqe8845favc3l5pripltm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.raymon.eventreporter",
+            "certificate_hash": "8798f1d9c12046fc73011c5e4f0c257afb35dcb1"
+          }
+        },
+        {
+          "client_id": "380468152290-67jfii4bibm9bqat8kmtnk8ejon1jtef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.raymon.eventreporter",
+            "certificate_hash": "96efa802a0cc3861fb65a642714fd5c0a9de11d5"
+          }
+        },
+        {
+          "client_id": "380468152290-e5kra1nhjnviu3hilllr7cnrnu3gb4g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEzxVLsfBsZEfGUxKTSqsYMKImGo67VaY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380468152290-e5kra1nhjnviu3hilllr7cnrnu3gb4g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

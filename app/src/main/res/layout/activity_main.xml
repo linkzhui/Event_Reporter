@@ -1,37 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_container"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     tools:context="com.example.raymon.eventreporter.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        android:id="@+id/event_container">
-    </RelativeLayout>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/comment_container">
-    </RelativeLayout>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- username tag-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textSize="20sp"/>
+        <!-- username edit area-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextLogin"
+            android:layout_gravity="center_horizontal" />
+        <!-- password tag-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Password:" />
 
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:id="@+id/fragment_container"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="horizontal"-->
-    <!--tools:context="com.example.raymon.eventreporter.MainActivity">-->
+        <!-- password edit area-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextPassword"
+            android:inputType="textPassword"
+            android:layout_gravity="center_horizontal" />
 
-    <!--&lt;!&ndash;<fragment android:name="com.example.raymon.eventreporter.EventFragment"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:id="@+id/event_fragment"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-    <!--&lt;!&ndash;android:layout_width="match_parent">&ndash;&gt;-->
-    <!--&lt;!&ndash;</fragment>&ndash;&gt;-->
-    <!--</LinearLayout>-->
+        <!-- button to login-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_gravity="right"
+            android:id="@+id/submit" />
+
+        <!-- button to register-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_gravity="right"
+            android:id="@+id/register" />
+    </LinearLayout>
+</RelativeLayout>
